@@ -1613,9 +1613,9 @@
           var existingNgClass = rowRepeatDiv.attr("ng-class");
           var newNgClass = '';
           if ( existingNgClass ) {
-            newNgClass = existingNgClass.slice(0, -1) + ",'ui-grid-tree-header-row': row.treeLevel > -1}";
+            newNgClass = existingNgClass.slice(0, -1) + ",'ui-grid-tree-header-row': row.treeLevel > -1, 'ui-grid-tree-leaf': !row.treeNode.children || row.treeNode.children.length === 0}";
           } else {
-            newNgClass = "{'ui-grid-tree-header-row': row.treeLevel > -1}";
+            newNgClass = "{'ui-grid-tree-header-row': row.treeLevel > -1, 'ui-grid-tree-leaf': !row.treeNode.children || row.treeNode.children.length === 0}";
           }
           rowRepeatDiv.attr("ng-class", newNgClass);
 
