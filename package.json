@@ -8,8 +8,7 @@
   "scripts": {
     "init": "validate-commit-msg",
     "test": "grunt",
-    "commit": "git-cz",
-    "postinstall": "bower install; grunt build"
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
